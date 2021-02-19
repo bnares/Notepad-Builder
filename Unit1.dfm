@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 329
-  Top = 159
+  Left = 339
+  Top = 511
   Width = 870
   Height = 450
   Caption = 'Form1'
@@ -14,14 +14,12 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Memo1: TMemo
+  object tresc: TMemo
     Left = 0
     Top = 0
     Width = 854
     Height = 391
     Align = alClient
-    Lines.Strings = (
-      'Memo1')
     TabOrder = 0
   end
   object MainMenu1: TMainMenu
@@ -37,6 +35,7 @@ object Form1: TForm1
       end
       object Otworz1: TMenuItem
         Caption = 'Otworz'
+        OnClick = Otworz1Click
       end
       object Zapisz1: TMenuItem
         Caption = 'Zapisz  Ctr+S'
@@ -57,5 +56,9 @@ object Form1: TForm1
     object Pomoc1: TMenuItem
       Caption = '&Pomoc'
     end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 120
+    Top = 72
   end
 end
