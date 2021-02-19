@@ -27,10 +27,23 @@ __published:	// IDE-managed Components
         TMemo *tresc;
         TOpenDialog *OpenDialog1;
         TSaveDialog *SaveDialog1;
+        TMenuItem *WytnijCtrX1;
+        TMenuItem *KopiujCtrC1;
+        TMenuItem *WklejCtrV1;
+        TMenuItem *Zawijaniewierszy1;
+        TMenuItem *Czcionka1;
         void __fastcall Otworz1Click(TObject *Sender);
         void __fastcall Zapiszjako1Click(TObject *Sender);
         void __fastcall Zapisz1Click(TObject *Sender);
         void __fastcall Nowy1Click(TObject *Sender);
+        void __fastcall trescKeyDown(TObject *Sender, WORD &Key,
+          TShiftState Shift);
+        void __fastcall Zakoncz1Click(TObject *Sender);
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+        void __fastcall WytnijCtrX1Click(TObject *Sender);
+        void __fastcall KopiujCtrC1Click(TObject *Sender);
+        void __fastcall WklejCtrV1Click(TObject *Sender);
+        void __fastcall Zawijaniewierszy1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

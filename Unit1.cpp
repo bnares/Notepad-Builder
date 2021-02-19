@@ -75,3 +75,65 @@ void __fastcall TForm1::Nowy1Click(TObject *Sender)
         }
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::trescKeyDown(TObject *Sender, WORD &Key,
+      TShiftState Shift)
+{
+        if(Shift.Contains(ssCtrl))
+        {
+         if((Key =='s') || (Key =='S'))
+         {
+              Form1 -> Zapisz1Click(MainMenu1);
+         }
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Zakoncz1Click(TObject *Sender)
+{
+        if(Application -> MessageBox("Do really want to quit?", "Confirm",
+        MB_YESNO | MB_ICONQUESTION) == IDYES)
+        {
+                Application -> Terminate();
+        }
+        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+          if(Application -> MessageBox("Do really want to quit?", "Confirm",
+        MB_YESNO | MB_ICONQUESTION) == IDNO)
+        {
+                Action = caNone;
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::WytnijCtrX1Click(TObject *Sender)
+{
+        tresc -> CutToClipboard();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::KopiujCtrC1Click(TObject *Sender)
+{
+        tresc -> CopyToClipboard();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::WklejCtrV1Click(TObject *Sender)
+{
+        tresc -> PasteFromClipboard();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Zawijaniewierszy1Click(TObject *Sender)
+{
+        if (Zawijaniewierszy1 -> Checked ==true)
+        {
+         Zawijaniewierszy1 -> Checked =false;
+         tresc ->WordWrap = false;
+         tresc -> ScrollBars = ssBoth;
+        }
+        else
+        {
+         Zawijaniewierszy1 -> Checked = true;
+         tresc ->WordWrap = true;
+         tresc -> ScrollBars = ssVertical;
+        }
+}
+//---------------------------------------------------------------------------
