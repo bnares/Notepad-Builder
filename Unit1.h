@@ -26,7 +26,11 @@ __published:	// IDE-managed Components
         TMenuItem *Zakoncz1;
         TMemo *tresc;
         TOpenDialog *OpenDialog1;
+        TSaveDialog *SaveDialog1;
         void __fastcall Otworz1Click(TObject *Sender);
+        void __fastcall Zapiszjako1Click(TObject *Sender);
+        void __fastcall Zapisz1Click(TObject *Sender);
+        void __fastcall Nowy1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

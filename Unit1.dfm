@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 339
-  Top = 511
+  Left = 929
+  Top = 153
   Width = 870
   Height = 450
   Caption = 'Form1'
@@ -29,6 +29,7 @@ object Form1: TForm1
       Caption = '&Plik'
       object Nowy1: TMenuItem
         Caption = '&Nowy'
+        OnClick = Nowy1Click
       end
       object N1: TMenuItem
         Caption = '-'
@@ -39,9 +40,11 @@ object Form1: TForm1
       end
       object Zapisz1: TMenuItem
         Caption = 'Zapisz  Ctr+S'
+        OnClick = Zapisz1Click
       end
       object Zapiszjako1: TMenuItem
         Caption = 'Zapisz jako'
+        OnClick = Zapiszjako1Click
       end
       object Zakoncz1: TMenuItem
         Caption = 'Zakoncz'
@@ -60,5 +63,11 @@ object Form1: TForm1
   object OpenDialog1: TOpenDialog
     Left = 120
     Top = 72
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Plik Tekstowy (TXT)|*.txt|Dowolny Plik|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 184
+    Top = 80
   end
 end
